@@ -1,0 +1,30 @@
+/* Make every even entry on the list (#2, #4, #6, etc.) black text (#000) on a dark blue background (#376F70). */
+li:nth-child(even) { /* 2n + 0 */
+    background: #376F70;
+    text-decoration-color: black;
+  }
+
+li:nth-child(odd) { /* 2n + 1 */
+    background: #BEEEEF;
+    text-decoration-color: black;
+  }
+
+li:nth-child(10n) { 
+    margin-bottom:50px;
+  }
+  /* Make every tenth entry (#10, #20, #30) have 50px of white space after it for clarity, but not if it is the last entry. */
+
+li:last-child{
+    margin-bottom: inherit;
+}
+
+img {
+    border: 5px solid black;
+    margin: 10px;
+}
+
+img:hover, *:focus{ /* not a: focus bc it doesn't cover all the cases */
+/* can do img:hover, img:focus{ */
+/* asterisk is universal selector */
+    box-shadow: 10px 10px #376F70;
+}
